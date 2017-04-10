@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>
+
+    <style name="HeaderStyle" parent="@style/AppTheme" >
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:lineSpacingExtra">1.0dip</item>
+    </style>
+
+</resources>

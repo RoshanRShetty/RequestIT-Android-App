@@ -1,0 +1,46 @@
+# Appsum
+Linking Desires with Destinations
+
+Authors:
+	Manohar
+		Packages :	appathon.appsum.adapter
+				appathon.appsum.places
+				appathon.appsum.Transport
+				appathon.appsum.widget
+				appathon.appsum.CitySelection
+
+		Classes:	appathon.appsum.layoutSelector.MainActivity
+				appathon.appsum.layourSelector.TransportLayer
+				appathon.appsum.layourSelector.CurrentCity
+
+	Roshan
+		Packages :	appathon.appsum.Models
+				appathon.appsum.database
+		Classes:	appathon.appsum.layoutSelector.EmergencyLayout
+				appathon.appsum.layourSelector.VolunteerLayout
+				appathon.appsum.layoutSelector.MainActivity
+					
+	Vinay
+		Packages :	appathon.appsum.Food
+				appathon.appsum.Hotels
+		Classes:	appathon.appsum.layoutSelector.MainActivity
+
+	Akash
+		Packages :	appathon.appsum.Entertianment
+		Classes:	appathon.appsum.layoutSelector.MainActivity
+
+
+Instructions to import:
+
+There are two ways to import the project to Andriod Studio.
+
+1) Unzip the github project to a folder. Open Android Studio. Go to File->Import Project. 
+Then choose the specific project you want to import and then click Next->Finish. 
+It will build the Gradle automatically and'll be ready for you to use.
+
+2) Load Android Studio and select Check out project from Version Control.Select GitHub from the drop down list.
+   Enter your GitHub credentials. Then click Login. Fill out the following details
+     Vcs Repository URL: The URL of your repository on GitHub
+     Parent Directory: The local directory where you want to store this project
+     Directory Name: The name of your project
+   And click Clone

@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <EditText
+        android:id="@+id/cityEdtText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:imeOptions="actionSearch"
+        android:background="@color/white"
+        android:inputType="textFilter"
+        android:drawableLeft="@drawable/search_gray"
+        android:textSize="15.0sp"
+        android:textStyle="bold"
+        android:hint="Search for your city"
+        android:padding="10.0dip"
+        android:drawablePadding="5.0dip" />
+
+
+    <ListView android:id="@+id/cityList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cityEdtText"
+        android:layout_marginTop="3dp"
+        android:divider="@color/list_divider_color"
+        android:dividerHeight="1.0dip"
+        android:fadingEdge="none"/>
+
+</RelativeLayout>

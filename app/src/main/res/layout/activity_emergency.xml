@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:scrollbars="none"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:id="@+id/emergency_activity_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/countryfield">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country              :"
+            android:id="@+id/country"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#405d9a"
+
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" NA"
+            android:id="@+id/country_value"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/police_no_value"
+            android:layout_alignStart="@+id/police_no_value"
+            android:textColor="#FF0000"
+            android:background="#FFFF00"/>
+
+
+    </LinearLayout>
+    <View android:id="@+id/primerdivisor"
+        android:layout_below="@id/countryfield"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#808080" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/policefield"
+        android:layout_below="@id/primerdivisor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Police No           :"
+            android:id="@+id/police_no"
+            android:textSize="20sp"
+            android:layout_below="@+id/country"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#405d9a"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" NA"
+            android:id="@+id/police_no_value"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/police_no"
+            android:layout_toRightOf="@+id/ambulance_no"
+            android:layout_toEndOf="@+id/ambulance_no"
+            android:textColor="#FF0000"
+            android:background="#FFFF00"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:src="@drawable/call"
+            android:padding="10dp"
+            android:onClick="onPoliceCall"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="-10dp"/>
+        <Button
+            android:id="@+id/nearbybutton"
+
+            android:text="Nearby"
+            android:textColor="#F9FFE8"
+            android:textSize="15sp"
+            android:onClick="getNearestPlace"
+
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:background="@color/green"
+            />
+
+    </LinearLayout>
+
+    <View android:id="@+id/primerdivisor2"
+        android:layout_below="@id/policefield"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#808080" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/ambulancefield"
+        android:layout_below="@id/primerdivisor2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambulance No  :"
+            android:id="@+id/ambulance_no"
+            android:textSize="20sp"
+            android:layout_below="@+id/police_no"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#405d9a"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" NA"
+            android:id="@+id/ambulance_no_value"
+            android:textSize="20sp"
+            android:layout_below="@+id/police_no_value"
+            android:layout_toRightOf="@+id/ambulance_no"
+            android:layout_toEndOf="@+id/ambulance_no"
+            android:textColor="#FF0000"
+            android:background="#FFFF00"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton3"
+            android:src="@drawable/call"
+            android:padding="10dp"
+            android:onClick="onAmbCall"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="-10dp"/>
+        />
+
+
+    </LinearLayout>
+
+    <View android:id="@+id/primerdivisor3"
+        android:layout_below="@id/ambulancefield"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#808080" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/firefield"
+        android:layout_below="@id/primerdivisor3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fire Control No :"
+            android:id="@+id/firecontrol_no"
+            android:textSize="20sp"
+            android:layout_below="@+id/ambulance_no"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#405d9a"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" NA"
+            android:id="@+id/firecontrol_no_value"
+            android:textSize="20sp"
+            android:layout_below="@+id/ambulance_no"
+            android:layout_toRightOf="@+id/ambulance_no"
+            android:layout_toEndOf="@+id/ambulance_no"
+            android:textColor="#FF0000"
+            android:background="#FFFF00"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton4"
+            android:src="@drawable/call"
+            android:onClick="onFireCall"
+            android:padding="10dp"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="-10dp"/>
+        />
+
+
+    </LinearLayout>
+    <View android:id="@+id/primerdivisor4"
+        android:layout_below="@id/firefield"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="#808080" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/sos"
+        android:contentDescription="send sos"
+        android:onClick="shareSos"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/share"
+        android:onClick="share"
+        android:layout_below="@+id/primerdivisor4"
+        android:layout_alignRight="@+id/primerdivisor4"
+        android:layout_alignEnd="@+id/primerdivisor4" />
+
+
+</RelativeLayout>
+

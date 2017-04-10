@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ttu.appathon.request">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:allowTaskReparenting="true"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme">
+        <activity android:name=".splash.Splash"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:label=" "
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:alwaysRetainTaskState="true"
+            android:logo="@drawable/appsum_icon"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ttu.appathon.request.layoutSelector.FoodLayout"
+            android:label="@string/food_layout_title"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ttu.appathon.request.CitySelection.CitySelectionLayout"
+            android:label="Select City"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ttu.appathon.request.places.Attractions"
+            android:label="Attractions"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ttu.appathon.request.layoutSelector.EmergencyLayout"
+            android:label="Emergency"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ttu.appathon.request.CitySelection.CitySelectionLayoutEmergency"
+            android:label="Select City"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.EmergencyLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttu.appathon.request.places.AttractionPlaceDetails"
+            android:label="Request It"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ttu.appathon.request.places.Attractions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttu.appathon.request.Hotels.Accommodations_Details"
+            android:label="Request It"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ttu.appathon.request.Hotels.Accomadations"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ttu.appathon.request.Transport.TransportDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ttu.appathon.request.layoutSelector.TransportLayer"
+            android:label="Transport"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttu.appathon.request.Hotels.Accomadations"
+            android:label="Accommodation"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttu.appathon.request.Food.Restaurants"
+            android:label="Restaurants"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ttu.appathon.request.Entertainment.Movies"
+            android:label="Movies"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.ttu.appathon.request.layoutSelector.VolunteerLayout"
+            android:label="Volunteers"
+            android:parentActivityName="com.ttu.appathon.request.layoutSelector.VolunteerLayout"
+            android:screenOrientation="portrait" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDhjJfd3CFnWEA5HW2nD5_1Xql7Yms4-Hw" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.usebutton.applicationid"
+            android:value="app-4e621db2a8146052" />
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+</manifest>

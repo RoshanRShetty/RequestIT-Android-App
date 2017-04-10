@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/city_list_item_layout_1">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:id="@+id/city_list_item_layout_2">
+
+    <com.ttu.appathon.request.widget.RobotoCondensedBoldTextView
+        android:id="@+id/cityName"
+              android:layout_width="fill_parent"
+    		  android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:textSize="15.0sp"
+        android:background="@drawable/home_grid_cell_drawable"
+    		  />
+</RelativeLayout>
+</RelativeLayout>

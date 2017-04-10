@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/placeDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/placeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ff2d2d2a"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/placeAddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ff2d2d2a"
+            android:textSize="13sp" />
+
+
+        <ImageView
+            android:id="@+id/mapArea"
+            android:layout_width="fill_parent"
+            android:layout_height="200.0dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/places_details_transittype_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/transitByCar"
+                android:layout_width="20dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:onClick="openMapNavigation"
+                android:src="@drawable/icon_navigation_transittypes_car_gray" />
+
+            <ImageView
+                android:id="@+id/transitByBus"
+                android:layout_width="20dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:onClick="openMapNavigation"
+                android:src="@drawable/icon_navigation_transittypes_bus_gray"
+                android:tag="transitByBus" />
+
+            <ImageView
+                android:id="@+id/transitByBike"
+                android:layout_width="20dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:onClick="openMapNavigation"
+                android:src="@drawable/icon_navigation_transittypes_bike_gray" />
+
+            <ImageView
+                android:id="@+id/transitByWalk"
+                android:layout_width="20dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:onClick="openMapNavigation"
+                android:src="@drawable/icon_navigation_transittypes_walk_gray" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ordering_separator"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="5dp"
+            android:background="#331a1a19" />
+
+        <com.usebutton.sdk.ButtonDropin xmlns:button="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/button_dropin_id"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            button:btn_buttonId="btn-630fef8f6a9ffece"
+            button:btn_iconSize="20dp"
+            button:btn_textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

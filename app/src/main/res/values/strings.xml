@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Request It</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="food_layout_title">Food (sample layout)</string>
+    <string name="selectCityError">No city selected. Please select the city</string>
+    <string name="noCountryFound">" No Country Found"</string>
+    <string name="view_volunteers">Get Details</string>
+    <string name="requestit">Request It...</string>
+</resources>

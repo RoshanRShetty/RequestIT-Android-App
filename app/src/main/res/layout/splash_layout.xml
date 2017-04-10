@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:background="#405d9a">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/sirenwhite"
+        android:layout_marginTop="79dp"
+        android:id="@+id/emergency"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/waiter"
+        android:src="@drawable/waiterwhite"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/emergency"
+        android:layout_toLeftOf="@+id/emergency"
+        android:layout_toStartOf="@+id/emergency"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/attraction"
+        android:src="@drawable/attractionwhite"
+        android:layout_above="@+id/travel"
+        android:layout_toRightOf="@+id/hotel"
+        android:layout_toEndOf="@+id/hotel" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/travel"
+        android:layout_marginTop="67dp"
+        android:src="@drawable/transportwhite"
+        android:layout_below="@+id/waiter"
+        android:layout_toLeftOf="@+id/emergency"
+        android:layout_toStartOf="@+id/emergency" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/hotel"
+        android:src="@drawable/hotelwhite"
+        android:layout_alignTop="@+id/travel"
+        android:layout_toRightOf="@+id/emergency"
+        android:layout_toEndOf="@+id/emergency" />
+
+    <com.ttu.appathon.request.widget.RobotoCondensedBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/requestit"
+
+        android:textSize="32sp"
+        android:id="@+id/requesttitle"
+        android:textColor="#fff"
+        android:layout_marginBottom="93dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/hotel"
+        android:layout_alignEnd="@+id/hotel" />
+
+</RelativeLayout>
